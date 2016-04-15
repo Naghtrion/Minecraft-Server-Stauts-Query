@@ -11,7 +11,7 @@
 	$ip = "mc.meuserver.com"; //ip do seu servidor
 	$port = "25565";  //query_port do seu servidor
 	$max = "100"; //quantos players devem aparecer? Use "-1" para mostrar todos
-	$query = json_decode(file_get_contents('http://api.minetools.eu/query/'.$ip.'/'.$port.''), true);  //ira pegar os dados do seu servidor
+	$query = json_decode(file_get_contents('http://api.minetools.eu/query/'.$ip.'/'.$port), true);  //ira pegar os dados do seu servidor
 	if(empty($query['error'])) {
 		$playerlist = $query['Playerlist'];  //Adiciona os dados em variaveis
 		$online = $query['Players'];  //Adiciona os dados em variaveis
